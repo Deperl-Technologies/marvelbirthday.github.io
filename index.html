@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #ffecd2, #fcb69f);
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        overflow-x: hidden;
+      }
+      .container {
+        text-align: center;
+        padding: 50px 20px;
+      }
+      h1 {
+        font-size: 4em;
+        color: #ff4081;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 2em;
+        color: #ff6f91;
+        margin-top: 10px;
+      }
+      p {
+        font-size: 1.4em;
+        margin: 20px auto;
+        width: 80%;
+        line-height: 1.6;
+      }
+      .gallery {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .gallery img {
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+        border: 5px solid #fff;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s ease;
+      }
+      .gallery img:hover {
+        transform: scale(1.1);
+      }
+      .footer {
+        background: #ff6f91;
+        color: white;
+        padding: 50px 20px;
+        margin-top: 50px;
+        position: relative;
+      }
+      .footer h3 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+      .footer p {
+        font-size: 1.2em;
+        max-width: 600px;
+        margin: 0 auto 30px;
+      }
+      .magic-button {
+        background: white;
+        color: #ff6f91;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+      .magic-button:hover {
+        background: #ff4081;
+        color: white;
+      }
+      /* Floating hearts animation */
+      .heart {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background: red;
+        left: 50%;
+        top: 50%;
+        transform: rotate(45deg);
+        animation: float 5s infinite ease-in;
+        opacity: 0.7;
+      }
+      .heart::before,
+      .heart::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+      }
+      .heart::before {
+        top: -10px;
+        left: 0;
+      }
+      .heart::after {
+        left: -10px;
+        top: 0;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotate(45deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-1000px) rotate(45deg);
+          opacity: 0;
+        }
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        setTimeout(function () {
+          alert(
+            "HURRAY!!!\nToday the angels rejoice because YOU were born.\nHappy Birthday, Beautiful Arewa Marvelous!"
+          );
+        }, 1000);
+
+        // Floating hearts
+        setInterval(() => {
+          const heart = document.createElement("div");
+          heart.className = "heart";
+          heart.style.left = Math.random() * 100 + "vw";
+          heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+          document.body.appendChild(heart);
+          setTimeout(() => heart.remove(), 5000);
+        }, 300);
+      };
+
+      function showMagic() {
+        alert(
+          "Every heartbeat of mine whispers Happy Birthday 🥰 OloLademi Asakeade!"
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Happy Birthday, Marvelous!</h1>
+      <h2>Today, the World Became Brighter</h2>
+
+      <p>
+        Babygirl, today isn't just your birthday, it's a celebration of all the
+        beauty, kindness, and joy you bring into this world. You have every
+        reasons to rejoice and smiles, greater heights, and endless happiness.
+        May this special day be as wonderful and magical as your soul.
+      </p>
+
+      <div class="gallery">
+        <img src="IMG1.jpg" alt="Beautiful Moment 1" />
+        <img src="IMG2.jpg" alt="Beautiful Moment 2" />
+        <img src="IMG3.jpg" alt="Beautiful Moment 3" />
+        <img src="IMG2D.jpg" alt="Beautiful Moment 4" />
+        <img src="IMG1.jpg" alt="Beautiful Moment 1" />
+      </div>
+
+      <p>
+        I am blessed beyond words to wish you on your birthday.<br />
+        Here's to your laughter, your dreams, and all the unforgettable memories
+        yet to come. <br /><br />
+        <strong>Happy Birthday, Marvelous!</strong>
+      </p>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+      <h3>Wishing You Endless Joy & Love</h3>
+      <p>
+        Today, you deserve the whole world wrapped up in a smile. You are magic,
+        you are beauty, you are Marvelous!
+      </p>
+      <button class="magic-button" onclick="showMagic()">
+        Click for More Magic
+      </button>
+      <div style="text-align: center; padding-top: 15px">
+        courtesy: AdePerl🍁
+      </div>
+    </div>
+  </body>
+</html>
